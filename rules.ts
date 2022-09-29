@@ -63,14 +63,14 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // o = "Open" applications
     o: {
-      g: app("Google Chrome"),
-      c: app("Cron"),
+      b: app("Brave Browser"),
+      r: app("Reflect"),
       v: app("Visual Studio Code"),
-      d: app("Discord"),
+      m: app("Spotify"),
       s: app("Slack"),
-      e: app("Superhuman"),
-      n: app("Notion"),
-      t: app("Terminal"),
+      w: app("WhatsApp"),
+      p: app("1Password"),
+      t: app("iTerm"),
       // Open todo list managed via *H*ypersonic
       h: open(
         "notion://www.notion.so/graphcdn/7b33b924746647499d906c55f89d5026?v=7f9a78e5477d40088f54bdbaf212f304"
@@ -93,7 +93,7 @@ const rules: KarabinerRules[] = [
         description: "Window: First Third",
         to: [
           {
-            key_code: "left_arrow",
+            key_code: "d",
             modifiers: ["right_option", "right_control"],
           },
         ],
@@ -102,7 +102,7 @@ const rules: KarabinerRules[] = [
         description: "Window: Last Third",
         to: [
           {
-            key_code: "right_arrow",
+            key_code: "g",
             modifiers: ["right_option", "right_control"],
           },
         ],
@@ -112,7 +112,7 @@ const rules: KarabinerRules[] = [
         to: [
           {
             key_code: "left_arrow",
-            modifiers: ["right_option", "right_command"],
+            modifiers: ["right_option", "right_control"],
           },
         ],
       },
@@ -121,7 +121,7 @@ const rules: KarabinerRules[] = [
         to: [
           {
             key_code: "right_arrow",
-            modifiers: ["right_option", "right_command"],
+            modifiers: ["right_option", "right_control"],
           },
         ],
       },
@@ -129,8 +129,8 @@ const rules: KarabinerRules[] = [
         description: "Window: Full Screen",
         to: [
           {
-            key_code: "f",
-            modifiers: ["right_option", "right_command"],
+            key_code: "up_arrow",
+            modifiers: ["right_control", "right_option"],
           },
         ],
       },
@@ -138,8 +138,8 @@ const rules: KarabinerRules[] = [
         description: "Window: Previous Tab",
         to: [
           {
-            key_code: "tab",
-            modifiers: ["right_control", "right_shift"],
+            key_code: "left_arrow",
+            modifiers: ["right_command", "right_option"],
           },
         ],
       },
@@ -147,8 +147,8 @@ const rules: KarabinerRules[] = [
         description: "Window: Next Tab",
         to: [
           {
-            key_code: "tab",
-            modifiers: ["right_control"],
+            key_code: "right_arrow",
+            modifiers: ["right_command", "right_option"],
           },
         ],
       },
@@ -156,8 +156,8 @@ const rules: KarabinerRules[] = [
         description: "Window: Next Window",
         to: [
           {
-            key_code: "grave_accent_and_tilde",
-            modifiers: ["right_command"],
+            key_code: "tab",
+            modifiers: ["right_option"],
           },
         ],
       },
@@ -165,7 +165,7 @@ const rules: KarabinerRules[] = [
         description: "Window: Back",
         to: [
           {
-            key_code: "open_bracket",
+            key_code: "left_arrow",
             modifiers: ["right_command"],
           },
         ],
@@ -175,7 +175,7 @@ const rules: KarabinerRules[] = [
         description: "Window: Forward",
         to: [
           {
-            key_code: "close_bracket",
+            key_code: "right_arrow",
             modifiers: ["right_command"],
           },
         ],
