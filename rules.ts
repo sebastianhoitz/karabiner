@@ -71,6 +71,7 @@ const rules: KarabinerRules[] = [
       w: app("WhatsApp"),
       p: app("1Password"),
       t: app("iTerm"),
+      i: app("Insomnia"),
       // Open todo list managed via *H*ypersonic
       h: open(
         "notion://www.notion.so/graphcdn/7b33b924746647499d906c55f89d5026?v=7f9a78e5477d40088f54bdbaf212f304"
@@ -80,16 +81,16 @@ const rules: KarabinerRules[] = [
 
     // w = "Window" via rectangle.app
     w: {
+      // h: {
+      //   description: "Window: Hide",
+      //   to: [
+      //     {
+      //       key_code: "h",
+      //       modifiers: ["right_command"],
+      //     },
+      //   ],
+      // },
       h: {
-        description: "Window: Hide",
-        to: [
-          {
-            key_code: "h",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      j: {
         description: "Window: First Third",
         to: [
           {
@@ -98,7 +99,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      k: {
+      l: {
         description: "Window: Last Third",
         to: [
           {
@@ -107,7 +108,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      l: {
+      j: {
         description: "Window: Left Half",
         to: [
           {
@@ -116,7 +117,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      semicolon: {
+      k: {
         description: "Window: Right Half",
         to: [
           {
@@ -177,6 +178,58 @@ const rules: KarabinerRules[] = [
           {
             key_code: "right_arrow",
             modifiers: ["right_command"],
+          },
+        ],
+      },
+    },
+
+    // d = "digits"
+    d: {
+      j: {
+        to: [
+          {
+            key_code: "8",
+            modifiers: ["left_shift"],
+          },
+        ],
+      },
+      k: {
+        to: [
+          {
+            key_code: "9",
+            modifiers: ["left_shift"],
+          },
+        ],
+      },
+      u: {
+        to: [
+          {
+            key_code: "8",
+            modifiers: ["right_option"],
+          },
+        ],
+      },
+      i: {
+        to: [
+          {
+            key_code: "9",
+            modifiers: ["right_option"],
+          },
+        ],
+      },
+      m: {
+        to: [
+          {
+            key_code: "5",
+            modifiers: ["right_option"],
+          },
+        ],
+      },
+      comma: {
+        to: [
+          {
+            key_code: "6",
+            modifiers: ["right_option"],
           },
         ],
       },
