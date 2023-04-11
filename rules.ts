@@ -90,6 +90,33 @@ const rules: KarabinerRules[] = [
       //     },
       //   ],
       // },
+      c: {
+        description: "Window: Center half",
+        to: [
+          {
+            key_code: "u",
+            modifiers: ["right_option", "right_control"],
+          },
+        ],
+      },
+      y: {
+        description: "Window: First Fourth",
+        to: [
+          {
+            key_code: "y",
+            modifiers: ["right_option", "right_control"],
+          },
+        ],
+      },
+      o: {
+        description: "Window: Last Fourth",
+        to: [
+          {
+            key_code: "i",
+            modifiers: ["right_option", "right_control"],
+          },
+        ],
+      },
       h: {
         description: "Window: First Third",
         to: [
@@ -162,25 +189,25 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      b: {
-        description: "Window: Back",
-        to: [
-          {
-            key_code: "left_arrow",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      // Note: No literal connection. Both f and n are already taken.
-      m: {
-        description: "Window: Forward",
-        to: [
-          {
-            key_code: "right_arrow",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
+      // b: {
+      //   description: "Window: Back",
+      //   to: [
+      //     {
+      //       key_code: "left_arrow",
+      //       modifiers: ["right_command"],
+      //     },
+      //   ],
+      // },
+      // // Note: No literal connection. Both f and n are already taken.
+      // m: {
+      //   description: "Window: Forward",
+      //   to: [
+      //     {
+      //       key_code: "right_arrow",
+      //       modifiers: ["right_command"],
+      //     },
+      //   ],
+      // },
     },
 
     // d = "digits"
@@ -338,6 +365,71 @@ const rules: KarabinerRules[] = [
       },
     },
   }),
+  {
+    description: "Change hyper key to left_command",
+    manipulators: [
+      {
+        type: "basic",
+        from: {
+          key_code: "t",
+          modifiers: {
+            mandatory: [
+              "left_command",
+              "left_control",
+              "left_shift",
+              "left_option",
+            ],
+          },
+        },
+        to: [
+          {
+            key_code: "t",
+            modifiers: ["left_command"],
+          },
+        ],
+      },
+      {
+        type: "basic",
+        from: {
+          key_code: "w",
+          modifiers: {
+            mandatory: [
+              "left_command",
+              "left_control",
+              "left_shift",
+              "left_option",
+            ],
+          },
+        },
+        to: [
+          {
+            key_code: "w",
+            modifiers: ["left_command"],
+          },
+        ],
+      },
+      {
+        type: "basic",
+        from: {
+          key_code: "c",
+          modifiers: {
+            mandatory: [
+              "left_command",
+              "left_control",
+              "left_shift",
+              "left_option",
+            ],
+          },
+        },
+        to: [
+          {
+            key_code: "c",
+            modifiers: ["left_command"],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 fs.writeFileSync(
