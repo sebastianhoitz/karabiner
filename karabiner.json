@@ -48,28 +48,6 @@
                     "key_code": "tab"
                   }
                 ]
-              },
-              {
-                "type": "basic",
-                "description": "Slash -> Hyper Key",
-                "from": {
-                  "key_code": "slash"
-                },
-                "to": [
-                  {
-                    "key_code": "left_shift",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ]
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "slash"
-                  }
-                ]
               }
             ]
           },
@@ -348,13 +326,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open notion://www.notion.so/graphcdn/7b33b924746647499d906c55f89d5026?v=7f9a78e5477d40088f54bdbaf212f304"
+                    "shell_command": "open -a 'Cron.app'"
                   }
                 ],
-                "description": "Open notion://www.notion.so/graphcdn/7b33b924746647499d906c55f89d5026?v=7f9a78e5477d40088f54bdbaf212f304",
+                "description": "Open -a 'Cron.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "h",
+                  "key_code": "c",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -372,13 +350,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'zoom.us.app'"
+                    "shell_command": "open https://meet.google.com/nqa-csfc-wbk?authuser=0&pli=1"
                   }
                 ],
-                "description": "Open -a 'zoom.us.app'",
+                "description": "Open https://meet.google.com/nqa-csfc-wbk?authuser=0&pli=1",
                 "type": "basic",
                 "from": {
-                  "key_code": "z",
+                  "key_code": "d",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -455,16 +433,12 @@
                 "description": "Window: Center half",
                 "to": [
                   {
-                    "key_code": "u",
-                    "modifiers": [
-                      "right_option",
-                      "right_control"
-                    ]
+                    "shell_command": "open -g \"rectangle://execute-action?name=center-half\""
                   }
                 ],
                 "type": "basic",
                 "from": {
-                  "key_code": "c",
+                  "key_code": "m",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -483,11 +457,7 @@
                 "description": "Window: First Fourth",
                 "to": [
                   {
-                    "key_code": "y",
-                    "modifiers": [
-                      "right_option",
-                      "right_control"
-                    ]
+                    "shell_command": "open -g \"rectangle://execute-action?name=first-fourth\""
                   }
                 ],
                 "type": "basic",
@@ -511,11 +481,7 @@
                 "description": "Window: Last Fourth",
                 "to": [
                   {
-                    "key_code": "i",
-                    "modifiers": [
-                      "right_option",
-                      "right_control"
-                    ]
+                    "shell_command": "open -g \"rectangle://execute-action?name=last-fourth\""
                   }
                 ],
                 "type": "basic",
@@ -539,11 +505,7 @@
                 "description": "Window: First Third",
                 "to": [
                   {
-                    "key_code": "d",
-                    "modifiers": [
-                      "right_option",
-                      "right_control"
-                    ]
+                    "shell_command": "open -g \"rectangle://execute-action?name=first-third\""
                   }
                 ],
                 "type": "basic",
@@ -567,11 +529,7 @@
                 "description": "Window: Last Third",
                 "to": [
                   {
-                    "key_code": "g",
-                    "modifiers": [
-                      "right_option",
-                      "right_control"
-                    ]
+                    "shell_command": "open -g \"rectangle://execute-action?name=last-third\""
                   }
                 ],
                 "type": "basic",
@@ -595,11 +553,7 @@
                 "description": "Window: Left Half",
                 "to": [
                   {
-                    "key_code": "left_arrow",
-                    "modifiers": [
-                      "right_option",
-                      "right_control"
-                    ]
+                    "shell_command": "open -g \"rectangle://execute-action?name=left-half\""
                   }
                 ],
                 "type": "basic",
@@ -623,11 +577,7 @@
                 "description": "Window: Right Half",
                 "to": [
                   {
-                    "key_code": "right_arrow",
-                    "modifiers": [
-                      "right_option",
-                      "right_control"
-                    ]
+                    "shell_command": "open -g \"rectangle://execute-action?name=right-half\""
                   }
                 ],
                 "type": "basic",
@@ -651,11 +601,7 @@
                 "description": "Window: Full Screen",
                 "to": [
                   {
-                    "key_code": "up_arrow",
-                    "modifiers": [
-                      "right_control",
-                      "right_option"
-                    ]
+                    "shell_command": "open -g \"rectangle://execute-action?name=maximize\""
                   }
                 ],
                 "type": "basic",
@@ -819,7 +765,7 @@
               {
                 "to": [
                   {
-                    "key_code": "8",
+                    "key_code": "9",
                     "modifiers": [
                       "left_shift"
                     ]
@@ -845,7 +791,7 @@
               {
                 "to": [
                   {
-                    "key_code": "9",
+                    "key_code": "0",
                     "modifiers": [
                       "left_shift"
                     ]
@@ -871,9 +817,9 @@
               {
                 "to": [
                   {
-                    "key_code": "8",
+                    "key_code": "open_bracket",
                     "modifiers": [
-                      "right_option"
+                      "left_shift"
                     ]
                   }
                 ],
@@ -897,9 +843,9 @@
               {
                 "to": [
                   {
-                    "key_code": "9",
+                    "key_code": "close_bracket",
                     "modifiers": [
-                      "right_option"
+                      "left_shift"
                     ]
                   }
                 ],
@@ -923,10 +869,7 @@
               {
                 "to": [
                   {
-                    "key_code": "5",
-                    "modifiers": [
-                      "right_option"
-                    ]
+                    "key_code": "open_bracket"
                   }
                 ],
                 "type": "basic",
@@ -949,10 +892,7 @@
               {
                 "to": [
                   {
-                    "key_code": "6",
-                    "modifiers": [
-                      "right_option"
-                    ]
+                    "key_code": "close_bracket"
                   }
                 ],
                 "type": "basic",
@@ -1421,15 +1361,15 @@
               {
                 "to": [
                   {
-                    "key_code": "f",
+                    "key_code": "delete_or_backspace",
                     "modifiers": [
-                      "right_control"
+                      "right_option"
                     ]
                   }
                 ],
                 "type": "basic",
                 "from": {
-                  "key_code": "m",
+                  "key_code": "y",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -1447,15 +1387,113 @@
               {
                 "to": [
                   {
-                    "key_code": "j",
+                    "key_code": "delete_forward",
                     "modifiers": [
-                      "right_control"
+                      "right_option"
                     ]
                   }
                 ],
                 "type": "basic",
                 "from": {
-                  "key_code": "s",
+                  "key_code": "o",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_v",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "right_option"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "u",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_v",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "right_option"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_v",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "key_code": "home"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "g",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_v",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "key_code": "end"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "semicolon",
                   "modifiers": {
                     "mandatory": [
                       "any"

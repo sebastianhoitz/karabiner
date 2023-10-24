@@ -40,24 +40,6 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      {
-        type: "basic",
-        description: "Slash -> Hyper Key",
-        from: {
-          key_code: "slash",
-        },
-        to: [
-          {
-            key_code: "left_shift",
-            modifiers: ["left_command", "left_control", "left_option"],
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "slash",
-          },
-        ],
-      },
     ],
   },
   ...createHyperSubLayers({
@@ -72,11 +54,16 @@ const rules: KarabinerRules[] = [
       p: app("1Password"),
       t: app("iTerm"),
       i: app("Insomnia"),
-      // Open todo list managed via *H*ypersonic
-      h: open(
-        "notion://www.notion.so/graphcdn/7b33b924746647499d906c55f89d5026?v=7f9a78e5477d40088f54bdbaf212f304"
-      ),
-      z: app("zoom.us"),
+      // open calendar
+      // c: open("https://calendar.google.com/calendar/u/1/r/week"),
+      c: app("Cron"),
+      // open daily
+      d: open("https://meet.google.com/nqa-csfc-wbk?authuser=0&pli=1"),
+      // // Open todo list managed via *H*ypersonic
+      // h: open(
+      //   "notion://www.notion.so/graphcdn/7b33b924746647499d906c55f89d5026?v=7f9a78e5477d40088f54bdbaf212f304"
+      // ),
+      // z: app("zoom.us"),
     },
 
     // w = "Window" via rectangle.app
@@ -90,66 +77,94 @@ const rules: KarabinerRules[] = [
       //     },
       //   ],
       // },
-      c: {
+      m: {
         description: "Window: Center half",
         to: [
+          // {
+          //   key_code: "u",
+          //   modifiers: ["right_option", "right_control"],
+          // },
           {
-            key_code: "u",
-            modifiers: ["right_option", "right_control"],
+            shell_command:
+              'open -g "rectangle://execute-action?name=center-half"',
           },
         ],
       },
       y: {
         description: "Window: First Fourth",
         to: [
+          // {
+          //   key_code: "y",
+          //   modifiers: ["right_option", "right_control"],
+          // },
           {
-            key_code: "y",
-            modifiers: ["right_option", "right_control"],
+            shell_command:
+              'open -g "rectangle://execute-action?name=first-fourth"',
           },
         ],
       },
       o: {
         description: "Window: Last Fourth",
         to: [
+          // {
+          //   key_code: "i",
+          //   modifiers: ["right_option", "right_control"],
+          // },
           {
-            key_code: "i",
-            modifiers: ["right_option", "right_control"],
+            shell_command:
+              'open -g "rectangle://execute-action?name=last-fourth"',
           },
         ],
       },
       h: {
         description: "Window: First Third",
         to: [
+          // {
+          //   key_code: "d",
+          //   modifiers: ["right_option", "right_control"],
+          // },
           {
-            key_code: "d",
-            modifiers: ["right_option", "right_control"],
+            shell_command:
+              'open -g "rectangle://execute-action?name=first-third"',
           },
         ],
       },
       l: {
         description: "Window: Last Third",
         to: [
+          // {
+          //   key_code: "g",
+          //   modifiers: ["right_option", "right_control"],
+          // },
           {
-            key_code: "g",
-            modifiers: ["right_option", "right_control"],
+            shell_command:
+              'open -g "rectangle://execute-action?name=last-third"',
           },
         ],
       },
       j: {
         description: "Window: Left Half",
         to: [
+          // {
+          //   key_code: "left_arrow",
+          //   modifiers: ["right_option", "right_control"],
+          // },
           {
-            key_code: "left_arrow",
-            modifiers: ["right_option", "right_control"],
+            shell_command:
+              'open -g "rectangle://execute-action?name=left-half"',
           },
         ],
       },
       k: {
         description: "Window: Right Half",
         to: [
+          // {
+          //   key_code: "right_arrow",
+          //   modifiers: ["right_option", "right_control"],
+          // },
           {
-            key_code: "right_arrow",
-            modifiers: ["right_option", "right_control"],
+            shell_command:
+              'open -g "rectangle://execute-action?name=right-half"',
           },
         ],
       },
@@ -157,10 +172,15 @@ const rules: KarabinerRules[] = [
         description: "Window: Full Screen",
         to: [
           {
-            key_code: "up_arrow",
-            modifiers: ["right_control", "right_option"],
+            shell_command: 'open -g "rectangle://execute-action?name=maximize"',
           },
         ],
+        // to: [
+        //   {
+        //     key_code: "up_arrow",
+        //     modifiers: ["right_control", "right_option"],
+        //   },
+        // ],
       },
       u: {
         description: "Window: Previous Tab",
@@ -215,7 +235,7 @@ const rules: KarabinerRules[] = [
       j: {
         to: [
           {
-            key_code: "8",
+            key_code: "9",
             modifiers: ["left_shift"],
           },
         ],
@@ -223,7 +243,7 @@ const rules: KarabinerRules[] = [
       k: {
         to: [
           {
-            key_code: "9",
+            key_code: "0",
             modifiers: ["left_shift"],
           },
         ],
@@ -231,32 +251,30 @@ const rules: KarabinerRules[] = [
       u: {
         to: [
           {
-            key_code: "8",
-            modifiers: ["right_option"],
+            key_code: "open_bracket",
+            modifiers: ["left_shift"],
           },
         ],
       },
       i: {
         to: [
           {
-            key_code: "9",
-            modifiers: ["right_option"],
+            key_code: "close_bracket",
+            modifiers: ["left_shift"],
           },
         ],
       },
       m: {
         to: [
           {
-            key_code: "5",
-            modifiers: ["right_option"],
+            key_code: "open_bracket",
           },
         ],
       },
       comma: {
         to: [
           {
-            key_code: "6",
-            modifiers: ["right_option"],
+            key_code: "close_bracket",
           },
         ],
       },
@@ -292,6 +310,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      // lock screen
       l: {
         to: [
           {
@@ -355,13 +374,29 @@ const rules: KarabinerRules[] = [
       l: {
         to: [{ key_code: "right_arrow" }],
       },
-      // Magicmove via homerow.app
-      m: {
-        to: [{ key_code: "f", modifiers: ["right_control"] }],
+      // delete whole word to the left
+      y: {
+        to: [{ key_code: "delete_or_backspace", modifiers: ["right_option"] }],
       },
-      // Scroll mode via homerow.app
-      s: {
-        to: [{ key_code: "j", modifiers: ["right_control"] }],
+      // delete whole word to the right
+      o: {
+        to: [{ key_code: "delete_forward", modifiers: ["right_option"] }],
+      },
+      // move word left
+      u: {
+        to: [{ key_code: "left_arrow", modifiers: ["right_option"] }],
+      },
+      // move word right
+      i: {
+        to: [{ key_code: "right_arrow", modifiers: ["right_option"] }],
+      },
+      // move to beginning of line
+      g: {
+        to: [{ key_code: "home" }],
+      },
+      // move to end of line
+      semicolon: {
+        to: [{ key_code: "end" }],
       },
     },
   }),
