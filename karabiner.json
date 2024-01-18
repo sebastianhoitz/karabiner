@@ -158,10 +158,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Visual Studio Code.app'"
+                    "shell_command": "open -a 'Cursor.app'"
                   }
                 ],
-                "description": "Open -a 'Visual Studio Code.app'",
+                "description": "Open -a 'Cursor.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "v",
@@ -189,6 +189,30 @@
                 "type": "basic",
                 "from": {
                   "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_o",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Linear.app'"
+                  }
+                ],
+                "description": "Open -a 'Linear.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "n",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -326,10 +350,34 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Cron.app'"
+                    "shell_command": "open -a 'Microsoft Excel.app'"
                   }
                 ],
-                "description": "Open -a 'Cron.app'",
+                "description": "Open -a 'Microsoft Excel.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "x",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_o",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Notion Calendar.app'"
+                  }
+                ],
+                "description": "Open -a 'Notion Calendar.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "c",
@@ -690,6 +738,30 @@
                 "type": "basic",
                 "from": {
                   "key_code": "n",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Window: Next display",
+                "to": [
+                  {
+                    "shell_command": "open -g \"rectangle://execute-action?name=next-display\""
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "d",
                   "modifiers": {
                     "mandatory": [
                       "any"

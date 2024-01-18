@@ -47,16 +47,18 @@ const rules: KarabinerRules[] = [
     o: {
       b: app("Brave Browser"),
       r: app("Reflect"),
-      v: app("Visual Studio Code"),
+      v: app("Cursor"),
       m: app("Spotify"),
+      n: app("Linear"),
       s: app("Slack"),
       w: app("WhatsApp"),
       p: app("1Password"),
       t: app("iTerm"),
       i: app("Insomnia"),
+      x: app("Microsoft Excel"),
       // open calendar
       // c: open("https://calendar.google.com/calendar/u/1/r/week"),
-      c: app("Cron"),
+      c: app("Notion Calendar"),
       // open daily
       d: open("https://meet.google.com/nqa-csfc-wbk?authuser=0&pli=1"),
       // // Open todo list managed via *H*ypersonic
@@ -206,6 +208,19 @@ const rules: KarabinerRules[] = [
           {
             key_code: "tab",
             modifiers: ["right_option"],
+          },
+        ],
+      },
+      d: {
+        description: "Window: Next display",
+        to: [
+          // {
+          //   key_code: "right_arrow",
+          //   modifiers: ["right_control", "right_option", "right_command"],
+          // },
+          {
+            shell_command:
+              'open -g "rectangle://execute-action?name=next-display"',
           },
         ],
       },
